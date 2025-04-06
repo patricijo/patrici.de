@@ -30,9 +30,21 @@ const MacAnimation = () => {
   };
 
   useEffect(() => {
-    if (macWindowRef.current && isOpen) {
-      setMacWindowHeight(`${macWindowRef.current.offsetHeight}px`);
-    }
+    const updateHeight = () => {
+      if (macWindowRef.current && isOpen) {
+        setMacWindowHeight(`${macWindowRef.current.offsetHeight}px`);
+      }
+    };
+
+    window.addEventListener("resize", updateHeight);
+
+    // Initial height set
+    updateHeight();
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
   }, [isOpen]);
 
   return (
