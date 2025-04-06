@@ -16,12 +16,12 @@ export default function Home() {
           <Expertise />
         </div>
       </section>
-      <section className="snap-start min-h-screen">
+      <section className="min-h-screen">
         <div className="m-auto container max-w-7xl ">
           <References />
         </div>
       </section>
-      <section className="snap-start min-h-screen">
+      <section className="snap-start min-h-screen items-center flex">
         <div className="m-auto container max-w-7xl ">
           <Contact />
         </div>

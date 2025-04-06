@@ -3,9 +3,9 @@ import { Button } from "../ui";
 
 export const References = () => {
   return (
-    <div>
-      <div className="flex snap-start">
-        <div className="md:sticky top-0 left-0 h-screen items-center flex flex-1/3 p-4">
+    <>
+      <div className="snap-start flex flex-col md:flex-row space-x-4">
+        <div className="md:sticky md:top-0 md:left-0 flex md:flex-1/3 md:h-screen items-center p-4">
           <div className="space-y-4">
             <h1 className=" text-4xl font-black w-fit">Vegan Scanner</h1>
             <p>
@@ -16,21 +16,21 @@ export const References = () => {
             <Button>App Store (soon)</Button>
           </div>
         </div>
-        <div className="flex-2/3 my-[25%]">
+        <div className="md:flex-2/3 my-[25%] p-4">
           <VeganScanRef />
         </div>
       </div>
-      <div className="flex snap-start">
-        <div className="md:sticky top-0 left-0 h-screen items-center flex flex-1/3 p-4">
+      <div className="snap-start flex flex-col md:flex-row space-x-4">
+        <div className="md:sticky md:top-0 md:left-0 flex md:flex-1/3 md:h-screen items-center p-4">
           <div className="space-y-4">
             <h1 className=" text-4xl font-black w-fit">Linkhub</h1>
             <p>Alinkhubfsd f</p>
           </div>
         </div>
-        <div className="flex-2/3 my-[25%]">
+        <div className="md:flex-2/3 my-[25%] p-4">
           <VeganScanRef />
         </div>
       </div>
-    </div>
+    </>
   );
 };
