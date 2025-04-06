@@ -1,8 +1,14 @@
+import { ContactForm } from "../Form";
+
 export const Contact = () => {
   return (
-    <div className="grid grid-cols-3 gap-4">
-      <h1 className="text-4xl font-bold mb-4">Welcome to my portfolio!</h1>
-      <div className="col-span-2 ...">04as das das d as</div>
+    <div className="flex">
+      <div className="flex-1/3 items-center flex min-h-screen">
+        <h1 className="text-4xl font-bold mb-4">Welcome to my portfolio!</h1>
+      </div>
+      <div className="flex-2/3 items-center flex min-h-screen">
+        <ContactForm />
+      </div>
     </div>
   );
 };
