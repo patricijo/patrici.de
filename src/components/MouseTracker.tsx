@@ -28,13 +28,27 @@ const MouseTracker = () => {
     const handleScroll = () => {
       const scrollContainer = document.getElementById("scroll-container");
       if (scrollContainer) {
+        // Calculate scroll percentage (0-100)
+        const scrollYPercent = Math.round(
+          (scrollContainer.scrollTop /
+            (scrollContainer.scrollHeight - scrollContainer.clientHeight)) *
+            100
+        );
+
+        const scrollXPercent = Math.round(
+          (scrollContainer.scrollLeft /
+            (scrollContainer.scrollWidth - scrollContainer.clientWidth)) *
+            100
+        );
+
+        // Set both pixel and percentage values
         document.documentElement.style.setProperty(
           "--scroll-y",
-          Math.round(scrollContainer.scrollTop) + ""
+          Math.round(scrollYPercent) + ""
         );
         document.documentElement.style.setProperty(
           "--scroll-x",
-          Math.round(scrollContainer.scrollLeft) + ""
+          Math.round(scrollXPercent) + ""
         );
       }
     };
