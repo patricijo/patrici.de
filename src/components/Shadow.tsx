@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { HTMLAttributes, useRef } from "react";
 import { useMousePosition } from "./MouseTracker";
 
-type PictureProps = {
+type PictureProps = HTMLAttributes<HTMLDivElement> & {
   maxDistance?: number;
   sensitivity?: number;
   className?: string;
@@ -12,10 +12,12 @@ type PictureProps = {
 };
 
 const Shadow: React.FC<PictureProps> = ({
-  maxDistance = 5,
+  maxDistance = 10,
   sensitivity = 20,
   opacity = 0.4,
   children,
+  className,
+  ...props
 }) => {
   const { mousePosition, windowSize } = useMousePosition();
   const cardRef = useRef<HTMLDivElement>(null);
@@ -37,7 +39,7 @@ const Shadow: React.FC<PictureProps> = ({
   const distance = Math.sqrt(mouseX * mouseX + mouseY * mouseY);
   const maxMouseDistance = Math.max(windowSize.height, windowSize.width);
 
-  const blur = Math.max(3, (distance / maxMouseDistance) * 15);
+  const blur = Math.max(3, (distance / maxMouseDistance) * 20);
 
   const positionX = Math.min(
     maxDistance,
@@ -51,12 +53,14 @@ const Shadow: React.FC<PictureProps> = ({
   return (
     <div
       ref={cardRef}
+      className={` ${className || ""}`}
       style={{
         filter: `drop-shadow(${-positionY + "px"} ${positionX + "px"} ${
-          blur + "px"
+          blur * 2 + "px"
         } hsla(0, 0%, 0%, ${opacity} ) `,
         inlineSize: "fit-content",
       }}
+      {...props}
     >
       {children}
     </div>
