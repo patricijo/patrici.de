@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <div
       id="scroll-container"
-      className="h-screen snap-y snap-mandatory overflow-y-scroll bg-gradient-to-r from-slate-900 to-slate-700 backdrop-hue-rotate-[calc(var(--scroll-y)*3.6deg)]"
+      className="h-screen snap-y snap-mandatory overflow-y-scroll bg-gradient-to-r from-slate-900 to-slate-700"
     >
-      <div className="backdrop-hue-rotate-[calc(var(--scroll-y)*3.6deg)]">
+      <div className="backdrop-hue-rotate-[calc(var(--scroll-y)*3.6deg)]  glow">
         <section className="snap-start min-h-screen items-center flex">
           <div className="m-auto container max-w-7xl ">
             <Intro />
