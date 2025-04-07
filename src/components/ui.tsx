@@ -24,7 +24,9 @@ export const Card = ({ children, className, ...props }: DivElementProps) => {
   return (
     <Shadow>
       <div
-        className={`rounded-2xl bg-white p-4 w-full ${className || ""}`}
+        className={`rounded-2xl bg-white p-4 w-full hover:-translate-y-1 transition-all  ${
+          className || ""
+        }`}
         tabIndex={0}
         {...props}
       >
