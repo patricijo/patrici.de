@@ -78,7 +78,7 @@ const MacAnimation = () => {
           />
           Moments
         </div>
-        <Shadow>
+        <Shadow className="h-full">
           <div
             className={`w-full h-full absolute top-0 left-0 transition-all duration-300 ease-in-out origin-top-left   ${
               isOpen
