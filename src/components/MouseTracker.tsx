@@ -1,10 +1,58 @@
 "use client";
 
-import { useEffect } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
-const MouseTracker = () => {
+interface MousePosition {
+  x: number;
+  y: number;
+}
+interface WindowSize {
+  width: number;
+  height: number;
+}
+
+interface MouseContextValue {
+  mousePosition: MousePosition;
+  windowSize: WindowSize;
+}
+
+const MouseContext = createContext<MouseContextValue>({
+  mousePosition: { x: 0, y: 0 },
+  windowSize: { width: 0, height: 0 },
+});
+
+export const useMousePosition = (): MouseContextValue => {
+  const context = useContext(MouseContext);
+  if (!context) {
+    throw new Error("useMousePosition must be used within a MouseProvider");
+  }
+  return context;
+};
+
+const MouseTracker = ({ children }: { children: ReactNode }) => {
+  const [mousePosition, setMousePosition] = useState<MousePosition>({
+    x: 0,
+    y: 0,
+  });
+
+  const [windowSize, setWindowSize] = useState<WindowSize>({
+    width: 0,
+    height: 0,
+  });
+
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+
       document.documentElement.style.setProperty(
         "--mouse-x",
         Math.round(event.clientX) + ""
@@ -16,6 +64,11 @@ const MouseTracker = () => {
     };
 
     const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+
       document.documentElement.style.setProperty(
         "--window-width",
         Math.round(window.innerWidth) + ""
@@ -74,7 +127,11 @@ const MouseTracker = () => {
     };
   }, []);
 
-  return null;
+  const value: MouseContextValue = { mousePosition, windowSize };
+
+  return (
+    <MouseContext.Provider value={value}>{children}</MouseContext.Provider>
+  );
 };
 
 export default MouseTracker;

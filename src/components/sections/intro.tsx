@@ -1,4 +1,5 @@
 import Picture from "../Picture";
+import Shadow from "../Shadow";
 import { Button } from "../ui";
 
 export const Intro = () => {
@@ -14,7 +15,11 @@ export const Intro = () => {
           <h2 id="headline" className=" text-4xl w-fit">
             Hi, my name is
           </h2>
-          <h1 className=" text-5xl font-black w-fit">Sebastian Patrici Gil</h1>
+          <Shadow>
+            <h1 className=" text-5xl font-black w-fit">
+              Sebastian Patrici Gil
+            </h1>
+          </Shadow>
           <h2 className=" text-4xl  w-fit">
             I am a self-taught Full Stack Developer based in Hamburg/Germany
           </h2>

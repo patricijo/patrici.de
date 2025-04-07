@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Shadow from "./Shadow";
 
 const Picture: React.FC = () => {
   return (
@@ -9,7 +10,9 @@ const Picture: React.FC = () => {
           transform: `translateY(4%) translateX(4%)`,
         }}
       >
-        <Image src="/pp.png" alt="Picture" width={450} height={450} />
+        <Shadow>
+          <Image src="/pp.png" alt="Picture" width={450} height={450} />
+        </Shadow>
       </div>
 
       <div
@@ -20,7 +23,9 @@ const Picture: React.FC = () => {
           marginRight: "5%",
         }}
       >
-        <Image src="/cardboard.png" alt="Picture" width={450} height={450} />
+        <Shadow>
+          <Image src="/cardboard.png" alt="Picture" width={450} height={450} />
+        </Shadow>
       </div>
     </div>
   );
