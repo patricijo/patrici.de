@@ -1,4 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
+import Shadow from "./Shadow";
 
 type DivElementProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
@@ -16,5 +17,19 @@ export const Button = ({ children, className, ...props }: DivElementProps) => {
     >
       {children}
     </div>
+  );
+};
+
+export const Card = ({ children, className, ...props }: DivElementProps) => {
+  return (
+    <Shadow>
+      <div
+        className={`rounded-2xl bg-white p-4 w-full ${className || ""}`}
+        tabIndex={0}
+        {...props}
+      >
+        <div className=" rounded-xl overflow-hidden">{children}</div>
+      </div>
+    </Shadow>
   );
 };

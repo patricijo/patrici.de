@@ -1,37 +1,37 @@
+import Image from "next/image";
+import { Card } from "../ui";
+
 export const VeganScanRef = () => {
   return (
     <>
       <div className="columns-2 gap-4 space-y-4">
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-square bg-amber-500"></div>{" "}
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-square bg-amber-500"></div>{" "}
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-square bg-amber-500"></div>{" "}
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-square bg-amber-500"></div>{" "}
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-square bg-amber-500"></div>{" "}
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-video bg-amber-500"></div>
-        <div className="aspect-3/2 bg-amber-500"></div>
-        <div className="aspect-square bg-amber-500"></div>
+        <Card>
+          <Image
+            src={"/veganScanner/reactNative.png"}
+            width={300}
+            height={200}
+            alt="React Native"
+            className="w-full h-full object-contain"
+          />
+        </Card>
+        <Card>
+          <Image
+            src={"/veganScanner/expo.png"}
+            width={300}
+            height={200}
+            alt="Expo Cli"
+            className="w-full h-full object-contain px-16"
+          />
+        </Card>
+        <Card>
+          <Image
+            src={"/veganScanner/gemini.png"}
+            width={300}
+            height={200}
+            alt="Expo Cli"
+            className="w-full h-full object-contain px-16"
+          />
+        </Card>
       </div>
     </>
   );
