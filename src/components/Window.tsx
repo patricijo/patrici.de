@@ -68,7 +68,7 @@ const MacAnimation = () => {
           </div>
         </div>
 
-        <div className="bg-white p-4 aspect-video absolute right-4 bottom-4 rotate-3 items-center flex flex-col text-2xl text-gray-800 font-serif">
+        <div className="bg-white p-4 pb-12 aspect-video absolute right-4 bottom-4 rotate-3 items-center flex flex-col text-2xl text-gray-800 font-serif">
           <Image
             src="/familie.jpg"
             alt="Familie"
@@ -76,7 +76,6 @@ const MacAnimation = () => {
             width={300}
             height={300}
           />
-          Moments
         </div>
         <Shadow className={isOpen ? "h-full" : ""}>
           <div
