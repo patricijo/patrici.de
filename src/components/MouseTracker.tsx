@@ -17,14 +17,19 @@ interface WindowSize {
   height: number;
 }
 
+interface scrollPosition {
+  scrollY: number;
+}
 interface MouseContextValue {
   mousePosition: MousePosition;
   windowSize: WindowSize;
+  scrollPosition: scrollPosition;
 }
 
 const MouseContext = createContext<MouseContextValue>({
   mousePosition: { x: 0, y: 0 },
   windowSize: { width: 0, height: 0 },
+  scrollPosition: { scrollY: 0 },
 });
 
 export const useMousePosition = (): MouseContextValue => {
@@ -44,6 +49,10 @@ const MouseTracker = ({ children }: { children: ReactNode }) => {
   const [windowSize, setWindowSize] = useState<WindowSize>({
     width: 0,
     height: 0,
+  });
+
+  const [scrollPosition, setScrollPosition] = useState<scrollPosition>({
+    scrollY: 0,
   });
 
   useEffect(() => {
@@ -94,6 +103,10 @@ const MouseTracker = ({ children }: { children: ReactNode }) => {
             100
         );
 
+        setScrollPosition({
+          scrollY: scrollYPercent,
+        });
+
         // Set both pixel and percentage values
         document.documentElement.style.setProperty(
           "--scroll-y",
@@ -127,7 +140,11 @@ const MouseTracker = ({ children }: { children: ReactNode }) => {
     };
   }, []);
 
-  const value: MouseContextValue = { mousePosition, windowSize };
+  const value: MouseContextValue = {
+    mousePosition,
+    windowSize,
+    scrollPosition,
+  };
 
   return (
     <MouseContext.Provider value={value}>{children}</MouseContext.Provider>
