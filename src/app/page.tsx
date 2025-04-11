@@ -2,11 +2,13 @@ import { Contact } from "@/components/sections/contact";
 import { Intro } from "@/components/sections/intro";
 import { References } from "@/components/sections/references";
 import { Expertise } from "@/components/sections/expertise";
+import Glow from "@/components/Glow";
 
 export default function Home() {
   return (
     <div className="bg-gradient-to-r from-slate-900 to-slate-700 ">
-      <div className="glow">
+      <div className="relative">
+        <Glow />
         <div
           id="scroll-container"
           className="relative h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth z-30"
