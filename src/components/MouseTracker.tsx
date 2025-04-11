@@ -19,6 +19,7 @@ interface WindowSize {
 
 interface scrollPosition {
   scrollY: number;
+  scrollX: number;
 }
 interface MouseContextValue {
   mousePosition: MousePosition;
@@ -29,7 +30,7 @@ interface MouseContextValue {
 const MouseContext = createContext<MouseContextValue>({
   mousePosition: { x: 0, y: 0 },
   windowSize: { width: 0, height: 0 },
-  scrollPosition: { scrollY: 0 },
+  scrollPosition: { scrollY: 0, scrollX: 0 },
 });
 
 export const useMousePosition = (): MouseContextValue => {
@@ -53,6 +54,7 @@ const MouseTracker = ({ children }: { children: ReactNode }) => {
 
   const [scrollPosition, setScrollPosition] = useState<scrollPosition>({
     scrollY: 0,
+    scrollX: 0,
   });
 
   useEffect(() => {
@@ -61,15 +63,6 @@ const MouseTracker = ({ children }: { children: ReactNode }) => {
         x: event.clientX,
         y: event.clientY,
       });
-
-      document.documentElement.style.setProperty(
-        "--mouse-x",
-        Math.round(event.clientX) + ""
-      );
-      document.documentElement.style.setProperty(
-        "--mouse-y",
-        Math.round(event.clientY) + ""
-      );
     };
 
     const handleResize = () => {
@@ -77,15 +70,6 @@ const MouseTracker = ({ children }: { children: ReactNode }) => {
         width: window.innerWidth,
         height: window.innerHeight,
       });
-
-      document.documentElement.style.setProperty(
-        "--window-width",
-        Math.round(window.innerWidth) + ""
-      );
-      document.documentElement.style.setProperty(
-        "--window-height",
-        Math.round(window.innerHeight) + ""
-      );
     };
     const handleScroll = () => {
       const scrollContainer = document.getElementById("scroll-container");
@@ -105,17 +89,8 @@ const MouseTracker = ({ children }: { children: ReactNode }) => {
 
         setScrollPosition({
           scrollY: scrollYPercent,
+          scrollX: scrollXPercent,
         });
-
-        // Set both pixel and percentage values
-        document.documentElement.style.setProperty(
-          "--scroll-y",
-          Math.round(scrollYPercent) + ""
-        );
-        document.documentElement.style.setProperty(
-          "--scroll-x",
-          Math.round(scrollXPercent) + ""
-        );
       }
     };
 

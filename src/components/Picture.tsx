@@ -39,7 +39,7 @@ const Picture: React.FC = () => {
   return (
     <div className={`relative aspect-square flex justify-center`}>
       <div
-        className="top-0 left-[4%] mx-[5%] absolute"
+        className="top-0 left-[4%] mt-[5%] mx-[5%] absolute"
         style={{
           transform: `translateY(${rotation.x / 4}px) translateX(${
             -rotation.y / 4
