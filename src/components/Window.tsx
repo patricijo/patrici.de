@@ -6,19 +6,43 @@ import Shadow from "./Shadow";
 const ExpertiseData = [
   {
     title: "Languages",
-    items: ["Javascript", "HTML", "CSS", "Solidity"],
+    items: ["Typescript", "Javascript", "HTML", "CSS", "Solidity"],
   },
   {
     title: "Frameworks",
-    items: ["ReactJS", "React Native", "NextJS", "SASS"],
+    items: [
+      "NextJS",
+      "ReactJS",
+      "React Native",
+      "Tailwind CSS",
+      "SASS",
+      "ExpressJS",
+    ],
   },
   {
-    title: "Libaries",
-    items: ["Redux(toolkit)", "React Router", "Chakra UI", "Framer-Motion"],
+    title: "Libraries",
+    items: [
+      "Zustand",
+      "Framer Motion",
+      "React Query",
+      "Axios",
+      "React Hook Form",
+    ],
   },
-  { title: "Backend", items: ["Moralis", "Firebase", "Express.js", "MongoDB"] },
+  {
+    title: "Backend",
+    items: [
+      "Payload CMS",
+      "MongoDB",
+      "Prisma",
+      "GraphQL",
+      "REST",
+      "Node.js",
+      "Supabase",
+      "Drizzle",
+    ],
+  },
 ];
-
 const MacAnimation = () => {
   const [isOpen, setIsOpen] = useState(true);
 
