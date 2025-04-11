@@ -2,34 +2,25 @@
 import Image from "next/image";
 import Shadow from "./Shadow";
 import { useMousePosition } from "./MouseTracker";
-import { useEffect, useRef, useState } from "react";
-type RotationState = {
-  x: number;
-  y: number;
-};
+import { useRef } from "react";
 
 const Picture: React.FC = () => {
+  const { mousePosition } = useMousePosition();
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const [center, setCenter] = useState<RotationState>({ x: 0, y: 0 });
-  const { mousePosition } = useMousePosition();
+  const card = cardRef.current;
+  const rect = card?.getBoundingClientRect() || {
+    left: 0,
+    width: 0,
+    top: 0,
+    height: 0,
+  };
 
-  useEffect(() => {
-    if (!cardRef.current) return;
-    const card = cardRef.current;
-    const rect = card.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
 
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-
-    setCenter({
-      x: centerX,
-      y: centerY,
-    });
-  }, []);
-
-  const mouseX = mousePosition.x - center.x;
-  const mouseY = mousePosition.y - center.y;
+  const mouseX = mousePosition.x - centerX;
+  const mouseY = mousePosition.y - centerY;
 
   const rotation = {
     x: Math.min(10, Math.max(-7, -mouseY / 20) * 1.2),
