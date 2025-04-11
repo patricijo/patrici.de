@@ -32,15 +32,31 @@ const getAnimationStyles = (type: AnimationType, isVisible: boolean) => {
       case "fade":
         return { opacity: 0 };
       case "slide-up":
-        return { opacity: 0, transform: "translateY(50px)" };
+        return {
+          opacity: 0,
+          transform: "translateY(50px)",
+          filter: "blur(10px)",
+        };
       case "slide-down":
-        return { opacity: 0, transform: "translateY(-50px)" };
+        return {
+          opacity: 0,
+          transform: "translateY(-50px)",
+          filter: "blur(10px)",
+        };
       case "slide-left":
-        return { opacity: 0, transform: "translateX(50px)" };
+        return {
+          opacity: 0,
+          transform: "translateX(50px)",
+          filter: "blur(10px)",
+        };
       case "slide-right":
-        return { opacity: 0, transform: "translateX(-50px)" };
+        return {
+          opacity: 0,
+          transform: "translateX(-50px)",
+          filter: "blur(10px)",
+        };
       case "scale":
-        return { opacity: 0, transform: "scale(0.8)" };
+        return { opacity: 0, transform: "scale(1.2)", filter: "blur(10px)" };
       case "rotate":
         return { opacity: 0, transform: "rotate(180deg)" };
       default:

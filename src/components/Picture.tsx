@@ -3,6 +3,7 @@ import Image from "next/image";
 import Shadow from "./Shadow";
 import { useMousePosition } from "./MouseTracker";
 import { useRef } from "react";
+import ScrollAnimation from "./ScrollAnimation";
 
 const Picture: React.FC = () => {
   const { mousePosition } = useMousePosition();
@@ -37,9 +38,11 @@ const Picture: React.FC = () => {
           }px)`,
         }}
       >
-        <Shadow>
-          <Image src="/pp.png" alt="Picture" width={450} height={450} />
-        </Shadow>
+        <ScrollAnimation type="slide-up" once={false} delay={0.5}>
+          <Shadow>
+            <Image src="/pp.png" alt="Picture" width={450} height={450} />
+          </Shadow>
+        </ScrollAnimation>
       </div>
 
       <div
@@ -51,9 +54,16 @@ const Picture: React.FC = () => {
           marginRight: "5%",
         }}
       >
-        <Shadow>
-          <Image src="/cardboard.png" alt="Picture" width={450} height={450} />
-        </Shadow>
+        <ScrollAnimation type="scale" once={false} delay={0.5}>
+          <Shadow>
+            <Image
+              src="/cardboard.png"
+              alt="Picture"
+              width={450}
+              height={450}
+            />
+          </Shadow>
+        </ScrollAnimation>
       </div>
     </div>
   );

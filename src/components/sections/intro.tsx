@@ -11,9 +11,7 @@ export const Intro = () => {
     <div className="flex flex-col md:flex-row space-x-4">
       <div className="flex md:flex-1/3 md:min-h-screen items-center p-4 w-full">
         <div className="max-w-[450px] w-full mx-auto">
-          <ScrollAnimation type="slide-up" once={false} delay={0.7}>
-            <Picture />
-          </ScrollAnimation>
+          <Picture />
         </div>
       </div>
       <div className="flex md:flex-2/3 md:min-h-screen items-center p-4 w-full">
