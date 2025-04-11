@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     siteName: "Sebastian Patrici Gil",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/image.png",
+        width: 1317,
+        height: 471, //image.png
         alt: "Sebastian Patrici Gil",
       },
     ],
