@@ -16,7 +16,7 @@ export const Button = ({
 
   return (
     <div
-      className={`group relative inline-flex h-12 items-center overflow-hidden transition-all duration-200  rounded-md bg-black/30 hover:bg-black/40 hover:-translate-y-1  px-6 font-medium text-neutral-200 w-full  ${
+      className={`group relative inline-flex h-12 items-center overflow-hidden transition-all duration-200  rounded-md bg-black/30 hover:bg-black/40 hover:scale-105  px-6 font-medium text-neutral-200 w-full  ${
         className || ""
       }`}
       {...props}
