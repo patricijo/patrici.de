@@ -8,8 +8,7 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/demo/demo.webp"}
-            width={300}
-            height={800}
+            fill
             alt="React Native"
             className="w-full h-full object-contain"
           />
@@ -17,8 +16,7 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/veganScanner/reactNative.png"}
-            width={300}
-            height={200}
+            fill
             alt="React Native"
             className="w-full h-full object-contain"
           />
@@ -26,8 +24,7 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/demo/demo2.webp"}
-            width={300}
-            height={800}
+            fill
             alt="React Native"
             className="w-full h-full object-contain"
           />
@@ -36,8 +33,7 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/veganScanner/expo.png"}
-            width={300}
-            height={200}
+            fill
             alt="Expo Cli"
             className="w-full h-full object-contain px-16"
           />
@@ -45,8 +41,7 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/demo/demo3.webp"}
-            width={300}
-            height={800}
+            fill
             alt="React Native"
             className="w-full h-full object-contain"
           />
@@ -54,8 +49,7 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/veganScanner/gemini.png"}
-            width={300}
-            height={200}
+            fill
             alt="Expo Cli"
             className="w-full h-full object-contain px-16"
           />
@@ -63,8 +57,7 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/demo/demo1.webp"}
-            width={300}
-            height={800}
+            fill
             alt="React Native"
             className="w-full h-full object-contain"
           />
