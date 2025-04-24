@@ -40,7 +40,7 @@ const Picture: React.FC = () => {
       >
         <ScrollAnimation type="slide-up" once={false} delay={0.5}>
           <Shadow>
-            <Image src="/pp.png" alt="Picture" width={450} height={450} />
+            <Image src="/pp.png" alt="Picture" width={387} height={323} />
           </Shadow>
         </ScrollAnimation>
       </div>
@@ -59,8 +59,8 @@ const Picture: React.FC = () => {
             <Image
               src="/cardboard.png"
               alt="Picture"
-              width={450}
-              height={450}
+              width={414}
+              height={291}
             />
           </Shadow>
         </ScrollAnimation>
