@@ -10,7 +10,7 @@ export const VeganScanRef = () => {
             src={"/demo/demo.webp"}
             fill
             alt="React Native"
-            className="w-full h-full object-contain"
+            className="w-full h-full max-w-[390px] object-contain"
           />
         </Card>
         <Card>
@@ -18,7 +18,7 @@ export const VeganScanRef = () => {
             src={"/veganScanner/reactNative.png"}
             fill
             alt="React Native"
-            className="w-full h-full object-contain"
+            className="w-full h-full max-w-[390px] object-contain"
           />
         </Card>
         <Card>
@@ -26,7 +26,7 @@ export const VeganScanRef = () => {
             src={"/demo/demo2.webp"}
             fill
             alt="React Native"
-            className="w-full h-full object-contain"
+            className="w-full h-full max-w-[390px] object-contain"
           />
         </Card>
 
@@ -35,7 +35,7 @@ export const VeganScanRef = () => {
             src={"/veganScanner/expo.png"}
             fill
             alt="Expo Cli"
-            className="w-full h-full object-contain px-16"
+            className="w-full h-full max-w-[390px] object-contain px-16"
           />
         </Card>
         <Card>
@@ -43,7 +43,7 @@ export const VeganScanRef = () => {
             src={"/demo/demo3.webp"}
             fill
             alt="React Native"
-            className="w-full h-full object-contain"
+            className="w-full h-full max-w-[390px] object-contain"
           />
         </Card>
         <Card>
@@ -51,7 +51,7 @@ export const VeganScanRef = () => {
             src={"/veganScanner/gemini.png"}
             fill
             alt="Expo Cli"
-            className="w-full h-full object-contain px-16"
+            className="w-full h-full max-w-[390px] object-contain px-16"
           />
         </Card>
         <Card>
@@ -59,7 +59,7 @@ export const VeganScanRef = () => {
             src={"/demo/demo1.webp"}
             fill
             alt="React Native"
-            className="w-full h-full object-contain"
+            className="w-full h-full max-w-[390px] object-contain"
           />
         </Card>
       </div>
