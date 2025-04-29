@@ -58,7 +58,6 @@ const Shadow: React.FC<PictureProps> = ({
         filter: `drop-shadow(${-positionY + "px"} ${positionX + "px"} ${
           blur * 2 + "px"
         } hsla(0, 0%, 0%, ${opacity} ) `,
-        inlineSize: "fit-content",
       }}
       {...props}
     >
