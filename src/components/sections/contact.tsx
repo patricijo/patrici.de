@@ -1,4 +1,4 @@
-import { MailIcon } from "lucide-react";
+import { MailIcon, FileText } from "lucide-react";
 import { ContactForm } from "../Form";
 import Link from "next/link";
 import ScrollAnimation from "../ScrollAnimation";
@@ -16,7 +16,7 @@ export const Contact = () => {
             </h1>
           </ScrollAnimation>
           <ScrollAnimation type="slide-right" once={false} delay={0.1}>
-            <p>Let’s connect. I’m looking forward to your message!</p>
+            <p>Let&apos;s connect. I&apos;m looking forward to your message!</p>
           </ScrollAnimation>
 
           <ScrollAnimation type="slide-right" once={false} delay={0.3}>
@@ -25,6 +25,17 @@ export const Contact = () => {
                 <div className="flex gap-2 items-center v">
                   <MailIcon size={18} />
                   sebastian.patrici@gmail.com
+                </div>
+              </Button>
+            </Link>
+          </ScrollAnimation>
+
+          <ScrollAnimation type="slide-right" once={false} delay={0.4}>
+            <Link href={"/impressum"}>
+              <Button className="justify-center">
+                <div className="flex gap-2 items-center">
+                  <FileText size={18} />
+                  Impressum
                 </div>
               </Button>
             </Link>

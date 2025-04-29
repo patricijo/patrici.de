@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 import MouseTracker from "@/components/MouseTracker";
+import Glow from "@/components/Glow";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,7 +56,19 @@ export default function RootLayout({
       <body
         className={`relative ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <MouseTracker>{children}</MouseTracker>
+        <MouseTracker>
+          <div className="bg-gradient-to-r from-slate-900 to-slate-700 ">
+            <div className="relative">
+              <Glow />
+              <div
+                id="scroll-container"
+                className="relative h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth z-30 w-full "
+              >
+                {children}
+              </div>
+            </div>
+          </div>
+        </MouseTracker>
       </body>
     </html>
   );
