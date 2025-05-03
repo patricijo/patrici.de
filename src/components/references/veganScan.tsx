@@ -8,58 +8,65 @@ export const VeganScanRef = () => {
         <Card>
           <Image
             src={"/demo/demo.webp"}
-            fill
+            width={300}
+            height={800}
             alt="React Native"
-            className="w-full h-full max-w-[390px] object-contain"
+            className="w-full h-full object-contain"
           />
         </Card>
         <Card>
           <Image
             src={"/veganScanner/reactNative.png"}
-            fill
+            width={300}
+            height={200}
             alt="React Native"
-            className="w-full h-full max-w-[390px] object-contain"
+            className="w-full h-full object-contain"
           />
         </Card>
         <Card>
           <Image
             src={"/demo/demo2.webp"}
-            fill
+            width={300}
+            height={800}
             alt="React Native"
-            className="w-full h-full max-w-[390px] object-contain"
+            className="w-full h-full object-contain"
           />
         </Card>
 
         <Card>
           <Image
             src={"/veganScanner/expo.png"}
-            fill
+            width={300}
+            height={200}
             alt="Expo Cli"
-            className="w-full h-full max-w-[390px] object-contain px-16"
+            className="w-full h-full object-contain px-16"
           />
         </Card>
         <Card>
           <Image
             src={"/demo/demo3.webp"}
-            fill
+            width={300}
+            height={800}
             alt="React Native"
-            className="w-full h-full max-w-[390px] object-contain"
+            className="w-full h-full object-contain"
           />
         </Card>
         <Card>
           <Image
             src={"/veganScanner/gemini.png"}
-            fill
+            width={300}
+            height={200}
             alt="Expo Cli"
-            className="w-full h-full max-w-[390px] object-contain px-16"
+            className="w-full h-full object-contain px-16"
           />
         </Card>
         <Card>
           <Image
             src={"/demo/demo1.webp"}
-            fill
+            width={300}
+            height={800}
             alt="React Native"
-            className="w-full h-full max-w-[390px] object-contain"
+            className="w-full h-full object-contain"
           />
         </Card>
       </div>
